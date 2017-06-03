@@ -55,7 +55,7 @@
 	}
 
 	/*The color in active mode should be modified*/
-	input{	
+	#myheader input{	
 		width: 85%;
 		padding: 5px 15px;
 		margin: 30px 10px 30px 50px;
@@ -303,6 +303,107 @@
 		color: white;
 		line-height: 50px;
 	}
+
+	.modal{
+		display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	    padding-top: 60px;
+	}
+
+	.modal-content {
+		position: relative;
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+	    height: 500px;
+
+	}
+
+	.chatTitle{
+		border: 0 0 1px 0 solid #888;
+		text-align: center;
+		background-color: rgba(255,192,0,0.4);
+		padding: 10px 10px;
+	}
+
+	.chatTitle h2{
+		margin: 0;
+	}
+
+	/* The Close Button (x) */
+	.close {
+	    position: absolute;
+	    right: 25px;
+	    top: 0;
+	    color: #000;
+	    font-size: 35px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		opacity: 0.4;
+	    cursor: pointer;
+	}
+
+	.modal-content input{
+		border-width: 1px 1px 0 0;
+		border-style: solid ;
+		border-color: #ffc000;
+		padding: 10px;
+		width:70%;
+		font-size: 16px;
+		position: absolute;
+		bottom: 0;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	.sendBtn{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 10px;
+		width: 20%;
+		border: 1px solid #ffc000;
+		background-color: #ffc000;
+		color: white;
+		text-align: center;
+		font-size: 16px;
+		cursor: pointer;
+		transition: 0.3s;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+	.sendBtn:hover{
+		opacity: 0.8;
+	}
+
+	.animate {
+	    -webkit-animation: animatezoom 0.6s;
+	    animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+	    from {-webkit-transform: scale(0)} 
+	    to {-webkit-transform: scale(1)}
+	}
+	    
+	@keyframes animatezoom {
+	    from {transform: scale(0)} 
+	    to {transform: scale(1)}
+	}
+
 
 	#myfooter p{
 		text-decoration: underline;

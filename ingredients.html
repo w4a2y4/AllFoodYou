@@ -193,7 +193,7 @@
 						<div class="itemImg">
 							<img src="./img/vege.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText">聯絡賣家</div>
+						  		<div class="contactText" onclick="document.getElementById('id01').style.display='block'">聯絡賣家</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -208,6 +208,20 @@
 					</div>
 				</div>
 			</div>
+			<div id="id01" class="modal">
+				<div class="modal-content animate">
+					<div class="chatTitle">
+						<h2>林怡萱</h2>
+						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					</div>
+					<!-- <span class="chatTextBox"></span> -->
+
+
+					<input type="text" placeholder="傳送訊息給賣家..." id="myMessage" name="chat">
+					<span onclick="newTalk()" class="sendBtn">傳送</span>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	<div id="myfooter">
@@ -242,9 +256,24 @@
 			}
 			slides[slideIndex-1].style.display="block";
 			dots[slideIndex-1].className += " active";
-			// setTimeout(showSlides(slideIndex++), 2000);
 		}
-		
+
+		//When sending message, create a chatTextBox
+		// function newTalk(){
+		// 	var chattext = document.getElementById("myMessage").value;
+		// 	var t = document.createTextNode(chattext);
+
+		// }		
+
+
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
 
 	</script>
 
