@@ -368,6 +368,62 @@
 		font-weight: 400;
 	}
 
+	.chatTextBox1 {
+	    width: 150px;
+	    background-color: #ffc000;
+	    color: #fff;
+	    text-align: left;
+	    padding: 5px;
+	    border-radius: 6px;
+
+	    /* Position the tooltip text */
+	    position: absolute;
+	    /*z-index: 2;*/
+	    top: 15%;
+	    right: 5%;
+	    margin-left: -60px;
+	    display:none;
+
+	}
+	.chatTextBox1::after {
+	    content: " ";
+	    position: absolute;
+	    top: 50%;
+	    left: 100%; /* To the right of the tooltip */
+	    margin-top: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: transparent transparent transparent #ffc000;
+	}
+
+	.chatTextBox2 {
+	    width: 150px;
+	    background-color: #ffc000;
+	    color: #fff;
+	    text-align: left;
+	    padding: 5px;
+	    border-radius: 6px;
+
+	    /* Position the tooltip text */
+	    position: absolute;
+	    /*z-index: 2;*/
+	    top: 30%;
+	    left: 5%;
+	    /*margin-left: -60px;*/
+	    display:none;
+
+	}
+	.chatTextBox2::after {
+	    content: " ";
+	    position: absolute;
+	    top: 50%;
+	    right: 100%; /* To the right of the tooltip */
+	    margin-top: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: transparent #ffc000 transparent transparent;
+	}
+
 	.sendBtn{
 		position: absolute;
 		bottom: 0;
@@ -403,6 +459,8 @@
 	    from {transform: scale(0)} 
 	    to {transform: scale(1)}
 	}
+
+
 
 
 	#myfooter p{

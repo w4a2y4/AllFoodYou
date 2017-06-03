@@ -212,10 +212,10 @@
 				<div class="modal-content animate">
 					<div class="chatTitle">
 						<h2>林怡萱</h2>
-						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<span onclick="closeChatBox()" class="close" title="Close Modal">&times;</span>
 					</div>
-					<!-- <span class="chatTextBox"></span> -->
-
+					<span id="chat01" class="chatTextBox1"></span>
+					<span id="chat02" class="chatTextBox2"></span>
 
 					<input type="text" placeholder="傳送訊息給賣家..." id="myMessage" name="chat">
 					<span onclick="newTalk()" class="sendBtn">傳送</span>
@@ -258,20 +258,42 @@
 			dots[slideIndex-1].className += " active";
 		}
 
-		//When sending message, create a chatTextBox
-		// function newTalk(){
-		// 	var chattext = document.getElementById("myMessage").value;
-		// 	var t = document.createTextNode(chattext);
+		// When sending message, create a chatTextBox
+		function newTalk(){
+			var chattext = document.getElementById("myMessage").value;
+			// var t = document.createTextNode(chattext);
+			var chatBox = document.getElementById("chat01");
+			if(chattext === ''){
+				//do nothing
+			}
+			else{
+				chatBox.innerHTML = chattext;
+				chatBox.style.display="block";
+				document.getElementById("myMessage").value="";
+			}
+			setTimeout(response, 2000);
+		}	
 
-		// }		
-
+		//Give response for demo
+		function response(){
+			var resChatBox = document.getElementById("chat02");
+			resChatBox.innerHTML = "沒問題 待會見！";
+			resChatBox.style.display = "block";
+		}
 
 		var modal = document.getElementById('id01');
+
+		function closeChatBox(){
+			modal.style.display = "none";
+			document.getElementById("chat01").style.display = "none";
+			document.getElementById("chat02").style.display = "none";
+		}
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
 		    if (event.target == modal) {
 		        modal.style.display = "none";
+
 		    }
 		}
 
