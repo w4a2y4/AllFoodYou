@@ -20,20 +20,21 @@
 	     Add the search icon.-->
 	<div id="myheader">
 		<div class="myspan">
-			<span class="titleSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
-			<span class="titleSpan">食譜推薦</span>
-			<span class="titleSpan">買食材</span>
-			<span class="titleSpan">賣食材</span>
-			<span class="titleSpan">找飯友</span>
+			<span class="titleSpan activeSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
+			<a><span class="titleSpan">食譜推薦</span></a>
+			<a><span class="titleSpan activeSpan">買食材</span></a>
+			<a><span class="titleSpan">買熟食</span></a>
+			<a href="./cook.html"><span class="titleSpan">找飯友</span></a>
 			<span class="titleSpan login">Log in</span>
 		</div>
-		<input type="text" id="myInput" placeholder="請輸入欲搜尋食材之關鍵字...">
+		<input type="text" id="myInput" placeholder="請輸入欲搜尋食材之關鍵字">
 		<span class="search"><i class="fa fa-search" aria-hidden="true"></i></span>
 	</div>
 
 	<div id="container">
 		<div id="left">
 			<ul class="myUL">
+				<li class="titleLI">我是賣家</li>
 				<li class="titleLI">發起團購</li>
 				<li class="titleLI">特別企劃</li>
 				<li>▹ 即期品</li>
@@ -56,19 +57,19 @@
 				<div class="carousel-container">
 					<div class="mySlides fade">
 						<div class="numbertext">1 / 3</div>
-						<img src="./img/1.png" style="width:100%">
+						<img src="./img/uglyvege.png" style="width:100%">
 						<div class="text">Caption Text</div>
 					</div>
 
 					<div class="mySlides fade">
 						<div class="numbertext">2 / 3</div>
-						<img src="./img/2.png" style="width:100%">
+						<img src="./img/uglyvege.png" style="width:100%">
 						<div class="text">Caption Two</div>		
 					</div>
 
 					<div class="mySlides fade">
 						<div class="numbertext">3 / 3</div>
-						<img src="./img/3.png" style="width:100%">
+						<img src="./img/uglyvege.png" style="width:100%">
 						<div class="text">Caption Three</div>
 					</div>
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -105,6 +106,9 @@
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
 						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
+						</div>
 					</div>
 					<div class="item">
 						<div class="titleBox">
@@ -124,6 +128,11 @@
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/12晚上於頂好購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/10下午於全聯購入</span> -->
 						</div>
 					</div>
 					<div class="item">
@@ -145,6 +154,11 @@
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
 						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13早上於頂好購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/10下午於全聯購入</span> -->
+						</div>
 					</div>											
 					<div class="item">
 						<div class="titleBox">
@@ -164,6 +178,10 @@
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
+						</div>
+
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
 						</div>
 					</div>		
 					<div class="item">
@@ -185,6 +203,11 @@
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
 						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13下午於小南門市場購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/13下午於小南門市場購入</span> -->
+						</div>
 					</div>	
 					<div class="item">
 						<div class="titleBox">
@@ -204,6 +227,9 @@
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/14早上於水源市場購入</p>
 						</div>
 					</div>
 				</div>
@@ -230,6 +256,8 @@
 
 
 	<script type="text/javascript">
+
+		//for slideshow
 		var slideIndex = 1;
 		showSlides(slideIndex);
 		function plusSlides(n){
@@ -262,7 +290,6 @@
 		function openChatBox(name){
 			document.getElementById("chat00").innerHTML = name;
 			document.getElementById('id01').style.display='block';
-
 		}
 
 		// When sending message, create a chatTextBox
@@ -277,7 +304,7 @@
 				chatBox.style.display="block";
 				document.getElementById("myMessage").value="";
 			}
-			setTimeout(response, 3000);
+			setTimeout(response, 2500);
 		}	
 
 		//Give response for demo
