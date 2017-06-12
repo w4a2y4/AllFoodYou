@@ -192,6 +192,44 @@
 		visibility: visible;
 	}
 
+
+	.login-modal-content {
+		position: relative;
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+	    height: 500px;
+	    text-align: center;
+
+	}
+
+	.loginWith{
+		width: 60%;
+		margin:5px auto 5px auto;
+		padding: 1px 10px;
+		color: white;
+		font-size: 16px;
+		border-radius: 10px;
+		cursor: pointer;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	.loginWith i{
+		margin-right: 5px;
+		font-size: 20px;
+	}
+
+	.signUp{
+		cursor: pointer;
+		color: #ffc000;
+		text-decoration: underline;
+		text-decoration-color: #ffc000;
+
+	}
+
 	/*for ingredients*/
 	.carousel-container{
 		max-width: 1000px;
